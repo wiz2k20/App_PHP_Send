@@ -1,0 +1,35 @@
+
+
+SELECT control, date, time, about, comment FROM controlsend ORDER BY control DESC"
+
+
+<?php
+$s1 = "projectdev.services";
+$u1 = "theboss";
+$p1 = "Manu!6273";
+$db1 = "controlsend";
+$port1 = "39399";
+
+//$mysqli -> new mysqli(host, username, password, dbname, port, socket)
+//mysqli_connect(host, username, password, dbname, port, socket)
+//$cone = mysqli_connect($s1, $u1, $p1, $db1);
+$cone = mysqli_connect($s1, $u1, $p1, $db1, $port1);
+// if ($cone->connect_error) {
+//     die("Connection failed: " . $cone->connect_error);
+// }
+
+if (!$cone)
+{
+    echo "<h2>MySQL Error!</h2>";   
+    exit;
+}
+
+//mysqli_close($cone);
+
+?>
+
+1	control Primária	int			Não	Nenhum		AUTO_INCREMENT	Alterar Alterar	Eliminar Eliminar	
+	2	date	date			Não	Nenhum			Alterar Alterar	Eliminar Eliminar	
+	3	time	time			Não	Nenhum			Alterar Alterar	Eliminar Eliminar	
+	4	about	text	utf8mb3_general_ci		Não	Nenhum			Alterar Alterar	Eliminar Eliminar	
+	5	comment	text	utf8mb3_general_ci		Não	Nenhum		
