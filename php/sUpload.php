@@ -14,7 +14,6 @@ function debug_to_console($data) {
 
     echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 }
-
 //debug_to_console("BEGIN");
 
 //$x_date1 = $_POST['x_date1'];

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="sty1.css">
+  <link rel="stylesheet" href="css/sty1.css">
   <title>send</title>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -19,7 +19,8 @@
     <!-- DIV WRAPPER -->
     <!-- <script src="scripts/desativar.js"></script> -->
 
-    <?php include 'functions/db1.php'; ?>
+    <?php include 'database/config.php'; ?>
+    <?php include 'php/form_send_email.php'; ?>
 
     <script>
       function reqpass2(clicked) {
@@ -69,7 +70,7 @@
           <div id="valueDBRsult" class="textoverde pictureframe"></div>
           
           <!-- FORM SEND -->
-          <script src="scripts/form_send.js"></script>
+          <script src="javascript/form_send.js"></script>
 
         </td>
         <td id='tdUPLOAD'>
@@ -103,7 +104,7 @@
           <br><br>
 
           <!-- FORM UPLOAD -->
-          <script src="scripts/form_upload.js"></script>
+          <script src="javascript/form_upload.js"></script>
 
         </td>
       </tr>
@@ -158,7 +159,7 @@
     <div id="valueFooter" class="textoverde pictureframe">Developer: Marcio Barcellos | Created on: 24/08/2019 | Last update: 03/04/2020 > 14/02/2022 > 03/10/2022 > 14/12/2023</div>  
   </div>
 
-  <script src="scripts/form_send.js"></script>
+  <script src="javascript/form_send.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 // https://makitweb.com/return-json-response-ajax-using-jquery-php/
-include 'functions/crud.php';
+include 'crud.php';
 
 // MENSAGEM DE DEBUG NO CONSOLE
 function debug_to_console($data) {

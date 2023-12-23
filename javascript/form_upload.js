@@ -18,7 +18,7 @@ $(document).ready(function(e) {
         return xhr;
       },
       method: 'POST',
-      url: 'sUpload.php',
+      url: 'php/sUpload.php',
       data: formData,
       cache: false,
       contentType: false,

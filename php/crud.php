@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-include 'db1.php';
+include '../database/config.php';
 
 $varMensagemSucesso = "Registry added";
 $varMensagemErro = "An error occurred when submitting your registry";

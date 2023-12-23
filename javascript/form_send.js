@@ -11,7 +11,7 @@ $(document).ready(function() {
       $.ajax({
         type: "POST",
         dataType: 'JSON',
-        url: "form_send.php",
+        url: "php/form_send.php",
         data: {
             about: about,
             comments: comments

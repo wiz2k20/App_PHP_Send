@@ -1,16 +1,18 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     require_once './vendor/autoload.php';
+    include './config/smtp.php';
 
+    $smtpInfoNew =  new smtpInfo();
     $mail = new PHPMailer();
 
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'marcbrcx@gmail.com';
-    $mail->Password = 'auud huwj fxdj hbec';
-    $mail->Port = 465;
-    $mail->SMTPSecure = "ssl";
+    $mail->Host = $smtpInfoNew->host;
+    $mail->Username = $smtpInfoNew->username;
+    $mail->Password = $smtpInfoNew->password;
+    $mail->SMTPAuth = $smtpInfoNew->auth;
+    $mail->Port = $smtpInfoNew->port;
+    $mail->SMTPSecure = $smtpInfoNew->secure;
     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     // $mail->Port = 587;
 
@@ -20,9 +22,9 @@
     // $mail->SMTPAutoTLS = false; 
     // $mail->Port = 25; 
 
-    $mail->setFrom('marcbrcx@gmail.com', 'Your Hotel');
-    $mail->addAddress('marcbrcx@gmail.com', 'Me');
-    $mail->Subject = 'Thanks for choosing Our Hotel!';
+    $mail->setFrom($smtpInfoNew->fromEmail, $smtpInfoNew->fromName);
+    $mail->addAddress($smtpInfoNew->toEmail, $smtpInfoNew->toName);
+    $mail->Subject = 'esse e o assunto';
 
     $mail->isHTML(TRUE);
     $mail->Body = '<html>Hi there, we are happy to <br>confirm your booking.</br> Please check the document in the attachment.</html>';

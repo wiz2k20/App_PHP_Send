@@ -1,3 +1,9 @@
 
-functions/db1.php
-scripts/form_upload.js
+#functions/db1.php
+#scripts/form_upload.js
+
+config/
+database/
+files/
+vendor/
+.vscode/
